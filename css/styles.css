@@ -160,3 +160,27 @@
     border-radius: 25px;
     border: 2px;
 }
+.hidden{
+  display: flex;
+    background-color: #f0f0f31e;
+    color: #fd0505;
+    justify-content: center;
+    font-size: inherit;
+    font-weight: bold;
+    margin-top: 3%;
+    font-size: x-large;
+    text-align: center;
+    width: 40%;  height: 2em;
+    border-radius: 25px;
+    border: 2px;
+    align-items: center;
+    border-style: solid;
+  border-color: rgb(249, 0, 0);
+}
+.name {
+  width: 100%;
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  
+}

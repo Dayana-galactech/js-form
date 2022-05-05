@@ -18,6 +18,27 @@
                         <h1>CONTACTS</h1>
                     </div>
                 </div>
+                <div id="namev" class="name" style="display:none" >
+                    <div class="col-lg-1">
+                         <div class="hidden">
+                            Please Enter A valid Name
+                        </div>
+                    </div>        
+                </div>
+                <div id="emailv" class="name" style="display:none" >
+                    <div class="col-lg-1">
+                         <div class="hidden">
+                            Please Enter A valid Email
+                        </div>
+                    </div>        
+                </div>
+                <div id="phonev" class="name" style="display:none" >
+                    <div class="col-lg-1">
+                         <div class="hidden">
+                            Please Enter A valid Phone Number
+                        </div>
+                    </div>        
+                </div>
                 <div class="row2">
                     <div class="col-lg-3">
                         <div class="row4">
@@ -79,9 +100,9 @@
                         <div class="box">Fill out the form to sign up for a triallesson for free</div>
                     </div>
                 </div>
-                <form class="form">
+                <form class="form" name="form1" action="#">
                     <div class="row4">
-                    
+
                         <div class="col-lg-3">
                             <input class="input" type="text" id="fname" name="fname" value="Name">
                         </div>
@@ -94,12 +115,15 @@
                     </div>
                     <div class="row3">
                         <div class="col-lg-1">
-                            <input class="input2" type="submit" value="Join Now">
+                            <input class="input2" type="submit" name="submit" value="Join Now" onclick="allLetter(document.form1.fname); checkEmail(document.form1.email); checkPhone(document.form1.phone)">
                         </div>
                     </div>
-                </form>    
+                </form>
             </div>
         </div>
     </section>
+    <script src="js/valid.js"> </script>
+
 </body>
+
 </html>
