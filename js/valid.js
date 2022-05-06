@@ -1,36 +1,35 @@
-function allLetter(inputtxt) {
-    var letters = /(.*[a-z]){2}/;
-    if (inputtxt.value.match(letters)) {
-        return true;
-    }
-    else {
-        var node = document.getElementById('namev');
-        node.style.display = 'flex';
-    }
+window.onload = () => {
+    document.querySelector(".input2").addEventListener('click', (event) => {
+        event.preventDefault();
 
-}
-function checkEmail() {
+        let firstName = document.querySelector('input[name="fname"]').value;
+        let email = document.querySelector('input[name="email"]').value;
+        let phone = document.querySelector('input[name="phone"]').value;
 
-    var email = document.getElementById('email');
-    var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        console.log([firstName, email, phone]);
 
-    if (!filter.test(email.value)) {
-        var node = document.getElementById('emailv');
-        node.style.display = 'flex';
-    }
-    else{
-        return true;
-    }
+        let isNameValid = isValidName(firstName);
+        let isEmailValid = isValidEmail(email);
+        let isPhoneValid = isValidPhone(phone);
+
+        if (!isNameValid) {
+            document.querySelector("#errorMessage").innerHTML = "Invalid Name"
+        }
+
+        console.log([isNameValid, isEmailValid, isPhoneValid]);
+        // checkPhone(document.form1.phone);
+    })
 }
 
-function checkPhone(phone) {
-    var empty = /^\s*$/;
-    var charc = /[a-zA-Z]/;
-    if ((phone.value.match(empty) || []).length > 0 || (phone.value.match(charc))) {
-        var node = document.getElementById('phonev');
-        node.style.display = 'flex';
-    }
-    else {
-        return true;
-    }
+function isValidName(name) {
+    return name.length > 2;
+}
+function isValidEmail(email) {
+    let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return filter.test(email)
+}
+
+function isValidPhone(phone) {
+    let charc = /[a-zA-Z]/;
+    return phone.length > 0 && !charc.test(parseInt(phone))
 }

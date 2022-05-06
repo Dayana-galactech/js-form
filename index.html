@@ -18,27 +18,7 @@
                         <h1>CONTACTS</h1>
                     </div>
                 </div>
-                <div id="namev" class="name" style="display:none" >
-                    <div class="col-lg-1">
-                         <div class="hidden">
-                            Please Enter A valid Name
-                        </div>
-                    </div>        
-                </div>
-                <div id="emailv" class="name" style="display:none" >
-                    <div class="col-lg-1">
-                         <div class="hidden">
-                            Please Enter A valid Email
-                        </div>
-                    </div>        
-                </div>
-                <div id="phonev" class="name" style="display:none" >
-                    <div class="col-lg-1">
-                         <div class="hidden">
-                            Please Enter A valid Phone Number
-                        </div>
-                    </div>        
-                </div>
+                <div id="errorMessage"></div>
                 <div class="row2">
                     <div class="col-lg-3">
                         <div class="row4">
@@ -104,18 +84,18 @@
                     <div class="row4">
 
                         <div class="col-lg-3">
-                            <input class="input" type="text" id="fname" name="fname" value="Name">
+                            <input class="input" type="text" id="fname" name="fname" placeholder="Name">
                         </div>
                         <div class="col-lg-3">
-                            <input class="input" type="email" id="email" name="email" value="E-mail">
+                            <input class="input" type="email" id="email" name="email" placeholder="E-mail">
                         </div>
                         <div class="col-lg-3">
-                            <input class="input" type="tel" id="phone" name="phone" value="Phone">
+                            <input class="input" type="tel" id="phone" name="phone" placeholder="Phone">
                         </div>
                     </div>
                     <div class="row3">
                         <div class="col-lg-1">
-                            <input class="input2" type="submit" name="submit" value="Join Now" onclick="allLetter(document.form1.fname); checkEmail(document.form1.email); checkPhone(document.form1.phone)">
+                            <button class="input2" type="submit" name="submit">Join Now</button>
                         </div>
                     </div>
                 </form>
