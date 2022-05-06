@@ -191,3 +191,37 @@
     background: rgba(0, 0, 0, 0.3);
     color: red;
 }
+@media only screen and (max-width:750px) {
+ .row{
+   flex-direction: column;
+ } 
+ .row2{
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+ }
+ .row2 .col-lg-3 {
+   width: 100%;
+   margin: 10px 0;
+ }
+ .input, .input2{
+ width: 100%;
+ }
+.form{
+  order:0;
+}
+.row4{
+  flex-direction: column;
+  justify-content: center;
+}
+.row4 .col-lg-3{
+  width: 100%;
+}
+.row4 .col-lg-2,.box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    white-space: inherit;
+}
+
+}
