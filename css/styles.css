@@ -190,6 +190,7 @@
     width: 100%;
     background: rgba(0, 0, 0, 0.3);
     color: red;
+    text-align-last: center;
 }
 @media only screen and (max-width:750px) {
  .row{
