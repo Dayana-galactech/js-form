@@ -55,6 +55,7 @@
     display: flex;
     justify-content: center;
     margin-top: 2%;
+    row-gap: 20px;
 }
 
 .col {
@@ -148,7 +149,6 @@
     border: 2px;
 }
 .input2{
-    display: flex;
     background-color: #f0f0f31e;
     color: #d1d1db;
     justify-content: center;
